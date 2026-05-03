@@ -1,0 +1,13 @@
+{
+  "itemGroup.surfacesamples": "Example Mod Tab",
+  "block.surfacesamples.example_block": "Example Block",
+  "item.surfacesamples.example_item": "Example Item",
+
+  "surfacesamples.configuration.title": "Surface Samples Configs",
+  "surfacesamples.configuration.section.surfacesamples.common.toml": "Surface Samples Configs",
+  "surfacesamples.configuration.section.surfacesamples.common.toml.title": "Surface Samples Configs",
+  "surfacesamples.configuration.items": "Item List",
+  "surfacesamples.configuration.logDirtBlock": "Log Dirt Block",
+  "surfacesamples.configuration.magicNumberIntroduction": "Magic Number Text",
+  "surfacesamples.configuration.magicNumber": "Magic Number"
+}
