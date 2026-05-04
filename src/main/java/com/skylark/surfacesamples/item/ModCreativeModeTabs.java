@@ -32,6 +32,8 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.surfacesamples.items"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.TEST);
+                        output.accept(ModItems.REDSTONE_SHARD);
+                        output.accept(ModItems.GLOWQUARTZ_SHARD);
                     }).build());
 
     public static void register(IEventBus eventBus) {

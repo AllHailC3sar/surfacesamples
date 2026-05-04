@@ -1,3 +1,3 @@
 {
-  "parent": "surfacesamples:block/glowquartz_block_lit"
+  "parent": "surfacesamples:block/glowquartz_block_unlit"
 }

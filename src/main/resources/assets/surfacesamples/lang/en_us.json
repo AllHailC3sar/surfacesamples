@@ -1,5 +1,7 @@
 {
   "item.surfacesamples.testitem": "Test Item!",
+  "item.surfacesamples.redstone_shard": "Shard of Crystallised Redstone",
+  "item.surfacesamples.glowquartz_shard": "Shard of Glowquartz",
 
   "block.surfacesamples.crystallised_redstone_block": "Block of Crystallised Redstone",
   "block.surfacesamples.glowquartz_block": "Block of Glowquartz",
