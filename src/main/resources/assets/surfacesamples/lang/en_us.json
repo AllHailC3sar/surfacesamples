@@ -4,6 +4,9 @@
   "block.surfacesamples.crystallised_redstone_block": "Block of Crystallised Redstone",
   "block.surfacesamples.glowquartz_block": "Block of Glowquartz",
 
+  "creativetab.surfacesamples.blocks": "Surface Samples Blocks",
+  "creativetab.surfacesamples.items": "Surface Samples Items",
+
   "surfacesamples.configuration.title": "Surface Samples Configs",
   "surfacesamples.configuration.section.surfacesamples.common.toml": "Surface Samples Configs",
   "surfacesamples.configuration.section.surfacesamples.common.toml.title": "Surface Samples Configs",

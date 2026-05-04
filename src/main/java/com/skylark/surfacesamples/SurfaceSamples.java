@@ -1,6 +1,7 @@
 package com.skylark.surfacesamples;
 
 import com.skylark.surfacesamples.block.ModBlocks;
+import com.skylark.surfacesamples.item.ModCreativeModeTabs;
 import com.skylark.surfacesamples.item.ModItems;
 import org.slf4j.Logger;
 
@@ -33,17 +34,22 @@ public class SurfaceSamples {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
-        // Register the ModItems Deferred Register to the mod event bus so items get registered
-        ModItems.register(modEventBus);
-
-        // Register the ModBlocks Deferred Register to the mod event bus so blocks get registered
-        ModBlocks.register(modEventBus);
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (SurfaceSamples) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
-        // Register the item to a creative tab
+        // add our custom creative mode tab(s) to the register
+        ModCreativeModeTabs.register(modEventBus);
+
+        // Register the ModItems Deferred Register to the mod event bus so items get registered
+        ModItems.register(modEventBus);
+
+        // Register the ModBlocks Deferred Register to the mod event bus so blocks get registered
+        ModBlocks.register(modEventBus);
+
+
+        // Register all items to a creative tab
         modEventBus.addListener(this::addCreative);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
