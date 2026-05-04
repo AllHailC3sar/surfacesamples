@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
-      "model": "surfacesamples:block/glowquartz_block"
+    "lit=false": {
+      "model": "surfacesamples:block/glowquartz_block_unlit"
+    },
+    "lit=true": {
+      "model": "surfacesamples:block/glowquartz_block_lit"
     }
   }
 }

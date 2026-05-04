@@ -8,15 +8,23 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.RedstoneLampBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
+import java.util.function.ToIntFunction;
 
 public class ModBlocks {
+    // function taken from the minecraft Blocks class to allow for lit/unlit blocks
+    private static ToIntFunction<BlockState> litBlockEmission(int lightValue) {
+        return p_50763_ -> p_50763_.getValue(BlockStateProperties.LIT) ? lightValue : 0;
+    }
+
+
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(SurfaceSamples.MOD_ID);
 
@@ -29,13 +37,11 @@ public class ModBlocks {
                     .sound(SoundType.AMETHYST)));
 
     public static final DeferredBlock<Block> GLOWQUARTZ_BLOCK = registerBlock("glowquartz_block",
-            () -> new Block(
-                    BlockBehaviour.Properties.of()
-                            .mapColor(MapColor.SAND)
-                            .instrument(NoteBlockInstrument.PLING)
-                            .strength(0.3F)
-                            .sound(SoundType.GLASS)
-                            .lightLevel(p_50872_ -> 7)
+            () -> new RedstoneLampBlock(BlockBehaviour.Properties.of()
+                    .lightLevel(litBlockEmission(15))
+                    .strength(0.3F)
+                    .sound(SoundType.GLASS)
+                    .isValidSpawn(Blocks::always)
             ));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
