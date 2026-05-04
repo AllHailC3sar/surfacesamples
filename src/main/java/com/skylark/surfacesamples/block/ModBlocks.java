@@ -1,6 +1,7 @@
 package com.skylark.surfacesamples.block;
 
 import com.skylark.surfacesamples.SurfaceSamples;
+import com.skylark.surfacesamples.block.custom.ConcentratedRedstoneOre;
 import com.skylark.surfacesamples.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -24,23 +25,27 @@ public class ModBlocks {
         return p_50763_ -> p_50763_.getValue(BlockStateProperties.LIT) ? lightValue : 0;
     }
 
+    private static ToIntFunction<BlockState> poweredBlockEmission(int lightValue) {
+        return p_50763_ -> p_50763_.getValue(BlockStateProperties.POWERED) ? lightValue : 0;
+    }
+
 
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(SurfaceSamples.MOD_ID);
 
     public static final DeferredBlock<Block> CRYSTALLISED_REDSTONE_BLOCK = registerBlock("crystallised_redstone_block",
-            () -> new PoweredBlock(BlockBehaviour.Properties.of()
+            () -> new ConcentratedRedstoneOre(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.FIRE)
                     .requiresCorrectToolForDrops()
-                    .lightLevel(p_50872_ -> 5)
-                    .strength(5.0F, 6.0F)
+                    .lightLevel(poweredBlockEmission(9))
+                    .strength(3.0F, 6.0F)
                     .sound(SoundType.AMETHYST)));
 
     public static final DeferredBlock<Block> GLOWQUARTZ_BLOCK = registerBlock("glowquartz_block",
             () -> new RedstoneLampBlock(BlockBehaviour.Properties.of()
                     .lightLevel(litBlockEmission(15))
-                    .strength(0.3F)
-                    .sound(SoundType.GLASS)
+                    .strength(2.0F)
+                    .sound(SoundType.AMETHYST)
                     .isValidSpawn(Blocks::always)
             ));
 

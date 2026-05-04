@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "surfacesamples:glowquartz_block",
+    "surfacesamples:crystallised_redstone_block"
+  ]
+}
