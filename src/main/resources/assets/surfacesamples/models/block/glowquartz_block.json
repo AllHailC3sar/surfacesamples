@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "surfacesamples:block/glowquartz_block"
+  }
+}

@@ -1,7 +1,8 @@
 {
-  "itemGroup.surfacesamples": "Example Mod Tab",
-  "block.surfacesamples.example_block": "Example Block",
-  "item.surfacesamples.example_item": "Example Item",
+  "item.surfacesamples.testitem": "Test Item!",
+
+  "block.surfacesamples.crystallised_redstone_block": "Block of Crystallised Redstone",
+  "block.surfacesamples.glowquartz_block": "Block of Glowquartz",
 
   "surfacesamples.configuration.title": "Surface Samples Configs",
   "surfacesamples.configuration.section.surfacesamples.common.toml": "Surface Samples Configs",

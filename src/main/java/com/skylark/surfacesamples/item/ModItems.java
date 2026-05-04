@@ -1,0 +1,20 @@
+package com.skylark.surfacesamples.item;
+
+import com.skylark.surfacesamples.SurfaceSamples;
+import net.minecraft.world.item.Item;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredItem;
+import net.neoforged.neoforge.registries.DeferredRegister;
+
+public class ModItems {
+    // create a deferred register called ITEMS that we can add items to
+    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(SurfaceSamples.MOD_ID);
+
+    // add an item called testitem to the ITEMS register
+    public static final DeferredItem<Item> TEST = ITEMS.register("testitem",
+            () -> new Item(new Item.Properties()));
+
+    public static void register(IEventBus eventBus) {
+        ITEMS.register(eventBus);
+    }
+}
