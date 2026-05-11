@@ -2,6 +2,7 @@ package com.skylark.surfacesamples.block;
 
 import com.skylark.surfacesamples.SurfaceSamples;
 import com.skylark.surfacesamples.block.custom.ConcentratedRedstoneOre;
+import com.skylark.surfacesamples.block.custom.SampleBlock;
 import com.skylark.surfacesamples.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -39,7 +40,8 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .lightLevel(poweredBlockEmission(9))
                     .strength(3.0F, 6.0F)
-                    .sound(SoundType.AMETHYST)));
+                    .sound(SoundType.AMETHYST)
+            ));
 
     public static final DeferredBlock<Block> GLOWQUARTZ_BLOCK = registerBlock("glowquartz_block",
             () -> new RedstoneLampBlock(BlockBehaviour.Properties.of()
@@ -47,6 +49,13 @@ public class ModBlocks {
                     .strength(2.0F)
                     .sound(SoundType.AMETHYST)
                     .isValidSpawn(Blocks::always)
+            ));
+
+    public static final DeferredBlock<Block> TEST_SAMPLE = registerBlock("test_sample",
+            () -> new SampleBlock(BlockBehaviour.Properties.of()
+                    .strength(0.1f)
+                    .sound(SoundType.GRAVEL)
+                    .noOcclusion()
             ));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {

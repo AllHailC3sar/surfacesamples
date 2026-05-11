@@ -23,6 +23,7 @@ public class ModCreativeModeTabs {
                     .displayItems((parameters, output) -> {
                         output.accept(ModBlocks.GLOWQUARTZ_BLOCK);
                         output.accept(ModBlocks.CRYSTALLISED_REDSTONE_BLOCK);
+                        output.accept(ModBlocks.TEST_SAMPLE);
                     }).build());
 
     public static final Supplier<CreativeModeTab> SURFACE_SAMPLES_ITEMS_TAB = CREATIVE_MODE_TAB.register("surface_samples_items_tab",
