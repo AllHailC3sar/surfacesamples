@@ -1,7 +1,7 @@
 package com.skylark.surfacesamples.block.custom;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.tags.BlockTags;
+import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -15,6 +15,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
@@ -23,14 +24,37 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-public class SampleBlock extends Block implements SimpleWaterloggedBlock {
+
+    public class SampleBlock extends Block implements SimpleWaterloggedBlock {
+
+        public enum SampleFlavour implements StringRepresentable {
+            STONY("stony"),
+            SANDY("sandy"),
+            RED_SANDY("red_sandy"),
+            SNOWY("snowy");
+
+            private final String name;
+
+            private SampleFlavour(String p_156018_) {
+                this.name = p_156018_;
+            }
+
+            public String toString() {
+                return this.name;
+            }
+
+            public String getSerializedName() {
+                return this.name;
+            }
+        }
+
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    public static final BooleanProperty SANDY = BooleanProperty.create("sandy");
+    public static final EnumProperty<SampleFlavour> SAMPLEFLAVOUR = EnumProperty.create("flavour", SampleFlavour.class);
     protected static final VoxelShape AABB = Shapes.or(Block.box(1.0, 0.0, 1.0, 13.0, 3.0, 13.0));
 
     public SampleBlock(Properties properties) {
         super(properties);
-        this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.FALSE).setValue(SANDY, Boolean.FALSE));
+        this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.FALSE).setValue(SAMPLEFLAVOUR, SampleFlavour.STONY));
     }
 
     @Override
@@ -44,7 +68,7 @@ public class SampleBlock extends Block implements SimpleWaterloggedBlock {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(WATERLOGGED, SANDY);
+        builder.add(WATERLOGGED, SAMPLEFLAVOUR);
     }
 
     @Override
@@ -61,9 +85,9 @@ public class SampleBlock extends Block implements SimpleWaterloggedBlock {
         }
 
         if (context.getLevel().getBlockState(context.getClickedPos().below()).getBlock() == Blocks.SAND || context.getLevel().getBlockState(context.getClickedPos().below()).getBlock() == Blocks.SANDSTONE) {
-            return blockstate.setValue(SANDY, Boolean.valueOf(true));
+            return blockstate.setValue(SAMPLEFLAVOUR, SampleFlavour.SANDY);
         } else if (context.getLevel().getBlockState(context.getClickedPos().below()).getBlock() == Blocks.RED_SAND || context.getLevel().getBlockState(context.getClickedPos().below()).getBlock() == Blocks.RED_SANDSTONE) {
-            return blockstate.setValue(SANDY, Boolean.valueOf(true));
+            return blockstate.setValue(SAMPLEFLAVOUR, SampleFlavour.RED_SANDY);
         }
         return this.defaultBlockState();
     }
