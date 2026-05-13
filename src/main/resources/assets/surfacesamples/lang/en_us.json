@@ -5,7 +5,16 @@
 
   "block.surfacesamples.crystallised_redstone_block": "Block of Crystallised Redstone",
   "block.surfacesamples.glowquartz_block": "Block of Glowquartz",
+
   "block.surfacesamples.test_sample": "Test Sample :)",
+  "block.surfacesamples.coal_ore_sample": "Coal Ore Sample",
+  "block.surfacesamples.copper_ore_sample": "Copper Ore Sample",
+  "block.surfacesamples.diamond_ore_sample": "Diamond Ore Sample",
+  "block.surfacesamples.emerald_ore_sample": "Emerald Ore Sample",
+  "block.surfacesamples.gold_ore_sample": "Gold Ore Sample",
+  "block.surfacesamples.iron_ore_sample": "Iron Ore Sample",
+  "block.surfacesamples.lapis_ore_sample": "Lapis Ore Sample",
+  "block.surfacesamples.redstone_ore_sample": "Redstone Ore Sample",
 
   "creativetab.surfacesamples.blocks": "Surface Samples Blocks",
   "creativetab.surfacesamples.items": "Surface Samples Items",

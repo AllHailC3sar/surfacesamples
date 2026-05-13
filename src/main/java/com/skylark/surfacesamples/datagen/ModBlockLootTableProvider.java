@@ -35,6 +35,22 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         add(ModBlocks.TEST_SAMPLE.get(),
                 block -> createMultipleOreDrops(ModBlocks.TEST_SAMPLE.get(), Items.IRON_NUGGET, 0, 3));
+        add(ModBlocks.COAL_SAMPLE.get(),
+                block -> createMultipleOreDrops(ModBlocks.COAL_SAMPLE.get(), Items.COAL, 1, 1));
+        add(ModBlocks.COPPER_SAMPLE.get(),
+                block -> createMultipleOreDrops(ModBlocks.COPPER_SAMPLE.get(), Items.RAW_COPPER, 0, 1));
+        add(ModBlocks.DIAMOND_SAMPLE.get(),
+                block -> createMultipleOreDrops(ModBlocks.DIAMOND_SAMPLE.get(), Items.DIAMOND, 0, 1));
+        add(ModBlocks.EMERALD_SAMPLE.get(),
+                block -> createMultipleOreDrops(ModBlocks.EMERALD_SAMPLE.get(), Items.EMERALD, 0, 1));
+        add(ModBlocks.GOLD_SAMPLE.get(),
+                block -> createMultipleOreDrops(ModBlocks.GOLD_SAMPLE.get(), Items.GOLD_NUGGET, 0, 3));
+        add(ModBlocks.IRON_SAMPLE.get(),
+                block -> createMultipleOreDrops(ModBlocks.IRON_SAMPLE.get(), Items.IRON_NUGGET, 0, 4));
+        add(ModBlocks.LAPIS_SAMPLE.get(),
+                block -> createMultipleOreDrops(ModBlocks.LAPIS_SAMPLE.get(), Items.LAPIS_LAZULI, 0, 2));
+        add(ModBlocks.REDSTONE_SAMPLE.get(),
+                block -> createMultipleOreDrops(ModBlocks.REDSTONE_SAMPLE.get(), Items.REDSTONE, 0, 5));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

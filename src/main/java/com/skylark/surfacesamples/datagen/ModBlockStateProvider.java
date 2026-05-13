@@ -27,7 +27,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
 //        ModelFile sampleD = models().withExistingParent("sample_d", this.modLoc("block/ore_sample_d"));
 
         blockWithItem(ModBlocks.CRYSTALLISED_REDSTONE_BLOCK);
-        horizontalBlock(ModBlocks.TEST_SAMPLE.get(), models().getExistingFile(modLoc("block/ore_sample_a")));
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {
@@ -37,17 +36,4 @@ public class ModBlockStateProvider extends BlockStateProvider {
     private void blockItem(DeferredBlock<?> deferredBlock) {
         simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("tutorialmod:block/" + deferredBlock.getId().getPath()));
     }
-
-//    public void sampleBlock(SampleBlock block, ModelFile var_a, ModelFile var_b, ModelFile var_c, ModelFile var_d) {
-//        getVariantBuilder(block).forAllStates(state -> {
-//            return ConfiguredModel.builder()
-//                    .modelFile(var_a)
-//                    .rotationY(0, 90, 180, 270)
-//                    .uvLock(false)
-//                    .ao(false)
-//                    .build();
-//        });
-//    }     // taken from buttonBlock
-
-
 }
