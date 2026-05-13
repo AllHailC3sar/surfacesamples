@@ -1,0 +1,7 @@
+{
+    "parent": "geolosys:block/ore_sample_VAR",
+    "textures": {
+        "ore": "minecraft:block/TEMPLATE",
+        "stone": "minecraft:block/STONE"
+    }
+}
