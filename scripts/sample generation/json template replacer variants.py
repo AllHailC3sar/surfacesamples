@@ -10,17 +10,27 @@ def askForPath(msg,folder=False,pause=1,end=": "):
 startingChar="a"
 totalVars=4
 
+
 placeholder="TEMPLATE"
 varholder = "VAR"
+stoneholder = "STONE"
 
 namespath = askForPath("Names csv")
 templatepath = askForPath("Template file")
+parentspath = askForPath("Parents file")
 outputpath = askForPath("Output folder",folder=True)
+
+
 names = open(namespath,"r").read().split(",")
+parents = open(parentspath,"r").read().split(",")
 template = open(templatepath,"r").read()
+
 for name in names:
-    for i in range(ord(startingChar),(ord(startingChar)+totalVars)):
-        variant = chr(i)
-        open(outputpath+"/"+name+"_sample_"+variant+".json","w").write(template.replace(varholder, variant))
+    # for parent in parents:
+    for j in range(ord(startingChar),(ord(startingChar)+totalVars)):
+        variant = chr(j)
+        open(outputpath+"/"+name+"_sample_"+variant+".json","w").write(template.replace(varholder, variant).replace(placeholder,name))
         outputFile = open(outputpath+"/"+name+"_sample_"+variant+".json","r").read()
         open(outputpath+"/"+name+"_sample_"+variant+".json","w").write(outputFile.replace(placeholder,name))
+
+# parent+"_"+ & .replace(stoneholder,parent) goes in the correct place if doing samples
