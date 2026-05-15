@@ -1,21 +1,21 @@
 package com.skylark.surfacesamples.block.custom;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.EnumProperty;
-import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.block.state.properties.*;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.BlockHitResult;
@@ -90,6 +90,31 @@ import org.jetbrains.annotations.Nullable;
             return blockstate.setValue(SAMPLEFLAVOUR, SampleFlavour.RED_SANDY);
         }
         return this.defaultBlockState();
+    }
+
+
+    private static boolean isSnowySetting(BlockState state) {
+        return state.is(BlockTags.SNOW);
+    }
+
+    private BlockState flavourGetter (BlockState belowState, BlockState state) {
+        if (belowState.is(Blocks.SAND) || belowState.is(Blocks.SANDSTONE)) {
+            return state.setValue(SAMPLEFLAVOUR, SampleFlavour.SANDY);
+        } else if (belowState.is(Blocks.RED_SAND) || belowState.is(Blocks.RED_SANDSTONE)) {
+            return state.setValue(SAMPLEFLAVOUR, SampleFlavour.RED_SANDY);
+        }
+        return this.defaultBlockState();
+    }
+
+    @Override
+    protected BlockState updateShape(BlockState state, Direction direction, BlockState facingState, LevelAccessor level, BlockPos pos, BlockPos facingPos) {
+        if (state.getValue(WATERLOGGED)) {
+            level.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
+        }
+
+        return direction == Direction.DOWN
+                ? flavourGetter(facingState, state) // technically this is poor form but I couldn't figure out how to do it otherwise
+                : super.updateShape(state, direction, facingState, level, pos, facingPos);
     }
 
     @Override
