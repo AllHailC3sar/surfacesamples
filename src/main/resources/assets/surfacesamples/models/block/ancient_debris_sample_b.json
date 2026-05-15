@@ -1,0 +1,7 @@
+{
+    "parent": "surfacesamples:block/ore_sample_b",
+    "textures": {
+        "ore": "minecraft:block/ancient_debris_side",
+        "stone": "minecraft:block/netherrack"
+    }
+}

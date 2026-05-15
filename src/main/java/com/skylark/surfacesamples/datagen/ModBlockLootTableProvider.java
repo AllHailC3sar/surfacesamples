@@ -51,6 +51,14 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createMultipleOreDrops(ModBlocks.LAPIS_SAMPLE.get(), Items.LAPIS_LAZULI, 0, 2));
         add(ModBlocks.REDSTONE_SAMPLE.get(),
                 block -> createMultipleOreDrops(ModBlocks.REDSTONE_SAMPLE.get(), Items.REDSTONE, 0, 5));
+        add(ModBlocks.ANCIENT_DEBRIS_SAMPLE.get(),
+                block -> createMultipleOreDrops(ModBlocks.ANCIENT_DEBRIS_SAMPLE.get(), Items.NETHERITE_SCRAP, 0, 1));
+        add(ModBlocks.NETHER_GOLD_SAMPLE.get(),
+                block -> createMultipleOreDrops(ModBlocks.NETHER_GOLD_SAMPLE.get(), Items.GOLD_NUGGET, 0, 7));
+        add(ModBlocks.NETHER_QUARTZ_SAMPLE.get(),
+                block -> createMultipleOreDrops(ModBlocks.NETHER_QUARTZ_SAMPLE.get(), Items.QUARTZ, 0, 1));
+        add(ModBlocks.QUARTZ_SAMPLE.get(),
+                block -> createMultipleOreDrops(ModBlocks.QUARTZ_SAMPLE.get(), Items.QUARTZ, 0, 1));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

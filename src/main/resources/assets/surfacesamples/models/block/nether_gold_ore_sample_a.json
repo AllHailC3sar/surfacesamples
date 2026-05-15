@@ -1,0 +1,7 @@
+{
+    "parent": "surfacesamples:block/ore_sample_a",
+    "textures": {
+        "ore": "minecraft:block/nether_gold_ore",
+        "stone": "minecraft:block/netherrack"
+    }
+}

@@ -32,6 +32,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.IRON_SAMPLE);
                         output.accept(ModBlocks.LAPIS_SAMPLE);
                         output.accept(ModBlocks.REDSTONE_SAMPLE);
+                        output.accept(ModBlocks.ANCIENT_DEBRIS_SAMPLE);
+                        output.accept(ModBlocks.NETHER_GOLD_SAMPLE);
+                        output.accept(ModBlocks.NETHER_QUARTZ_SAMPLE);
+                        output.accept(ModBlocks.QUARTZ_SAMPLE);
                     }).build());
 
     public static final Supplier<CreativeModeTab> SURFACE_SAMPLES_ITEMS_TAB = CREATIVE_MODE_TAB.register("surface_samples_items_tab",

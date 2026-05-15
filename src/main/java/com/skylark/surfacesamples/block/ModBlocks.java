@@ -54,55 +54,79 @@ public class ModBlocks {
     public static final DeferredBlock<Block> TEST_SAMPLE = registerBlock("test_sample",
             () -> new SampleBlock(BlockBehaviour.Properties.of()
                     .strength(0.1f)
-                    .sound(SoundType.GRAVEL)
+                    .sound(SoundType.TUFF)
                     .noOcclusion()
             ));
     public static final DeferredBlock<Block> COAL_SAMPLE = registerBlock("coal_ore_sample",
             () -> new SampleBlock(BlockBehaviour.Properties.of()
                     .strength(0.1f)
-                    .sound(SoundType.GRAVEL)
+                    .sound(SoundType.TUFF)
                     .noOcclusion()
             ));
     public static final DeferredBlock<Block> COPPER_SAMPLE = registerBlock("copper_ore_sample",
             () -> new SampleBlock(BlockBehaviour.Properties.of()
                     .strength(0.1f)
-                    .sound(SoundType.GRAVEL)
+                    .sound(SoundType.TUFF)
                     .noOcclusion()
             ));
     public static final DeferredBlock<Block> DIAMOND_SAMPLE = registerBlock("diamond_ore_sample",
             () -> new SampleBlock(BlockBehaviour.Properties.of()
                     .strength(0.1f)
-                    .sound(SoundType.GRAVEL)
+                    .sound(SoundType.TUFF)
                     .noOcclusion()
             ));
     public static final DeferredBlock<Block> EMERALD_SAMPLE = registerBlock("emerald_ore_sample",
             () -> new SampleBlock(BlockBehaviour.Properties.of()
                     .strength(0.1f)
-                    .sound(SoundType.GRAVEL)
+                    .sound(SoundType.TUFF)
                     .noOcclusion()
             ));
     public static final DeferredBlock<Block> GOLD_SAMPLE = registerBlock("gold_ore_sample",
             () -> new SampleBlock(BlockBehaviour.Properties.of()
                     .strength(0.1f)
-                    .sound(SoundType.GRAVEL)
+                    .sound(SoundType.TUFF)
                     .noOcclusion()
             ));
     public static final DeferredBlock<Block> IRON_SAMPLE = registerBlock("iron_ore_sample",
             () -> new SampleBlock(BlockBehaviour.Properties.of()
                     .strength(0.1f)
-                    .sound(SoundType.GRAVEL)
+                    .sound(SoundType.TUFF)
                     .noOcclusion()
             ));
     public static final DeferredBlock<Block> LAPIS_SAMPLE = registerBlock("lapis_ore_sample",
             () -> new SampleBlock(BlockBehaviour.Properties.of()
                     .strength(0.1f)
-                    .sound(SoundType.GRAVEL)
+                    .sound(SoundType.TUFF)
                     .noOcclusion()
             ));
     public static final DeferredBlock<Block> REDSTONE_SAMPLE = registerBlock("redstone_ore_sample",
             () -> new SampleBlock(BlockBehaviour.Properties.of()
                     .strength(0.1f)
-                    .sound(SoundType.GRAVEL)
+                    .sound(SoundType.TUFF)
+                    .noOcclusion()
+            ));
+    public static final DeferredBlock<Block> ANCIENT_DEBRIS_SAMPLE = registerBlock("ancient_debris_sample",
+            () -> new SampleBlock(BlockBehaviour.Properties.of()
+                    .strength(0.1f)
+                    .sound(SoundType.NETHERRACK)
+                    .noOcclusion()
+            ));
+    public static final DeferredBlock<Block> NETHER_GOLD_SAMPLE = registerBlock("nether_gold_ore_sample",
+            () -> new SampleBlock(BlockBehaviour.Properties.of()
+                    .strength(0.1f)
+                    .sound(SoundType.NETHERRACK)
+                    .noOcclusion()
+            ));
+    public static final DeferredBlock<Block> NETHER_QUARTZ_SAMPLE = registerBlock("nether_quartz_ore_sample",
+            () -> new SampleBlock(BlockBehaviour.Properties.of()
+                    .strength(0.1f)
+                    .sound(SoundType.NETHERRACK)
+                    .noOcclusion()
+            ));
+    public static final DeferredBlock<Block> QUARTZ_SAMPLE = registerBlock("quartz_ore_sample",
+            () -> new SampleBlock(BlockBehaviour.Properties.of()
+                    .strength(0.1f)
+                    .sound(SoundType.TUFF)
                     .noOcclusion()
             ));
 
