@@ -156,7 +156,7 @@ public class ConcentratedRedstoneOre extends Block {
      * Returns the signal encoded in the given block state.
      */
     protected int getSignalForState(BlockState state) {
-        return state.getValue(POWERED) ? 15 : 0;
+        return state.getValue(POWERED) ? 3 : 0;
     }
 
     @Override
