@@ -80,16 +80,17 @@ import org.jetbrains.annotations.Nullable;
     public @Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
         BlockState blockstate = this.defaultBlockState();
         FluidState fluidstate = context.getLevel().getFluidState(context.getClickedPos());
+        boolean shouldBeWaterlogged = Boolean.valueOf(Boolean.FALSE); // this is only here because I do not want to make a waterlogged model variant for all 90+ variations
         if (context.getLevel().getBlockState(context.getClickedPos()).getBlock() == Blocks.WATER) {
-            return blockstate.setValue(WATERLOGGED, Boolean.valueOf(fluidstate.getType() == Fluids.WATER));
+            shouldBeWaterlogged = Boolean.valueOf(fluidstate.getType() == Fluids.WATER);
         }
 
         if (context.getLevel().getBlockState(context.getClickedPos().below()).getBlock() == Blocks.SAND || context.getLevel().getBlockState(context.getClickedPos().below()).getBlock() == Blocks.SANDSTONE) {
-            return blockstate.setValue(SAMPLEFLAVOUR, SampleFlavour.SANDY);
+            return blockstate.setValue(SAMPLEFLAVOUR, SampleFlavour.SANDY).setValue(WATERLOGGED, Boolean.valueOf(shouldBeWaterlogged));
         } else if (context.getLevel().getBlockState(context.getClickedPos().below()).getBlock() == Blocks.RED_SAND || context.getLevel().getBlockState(context.getClickedPos().below()).getBlock() == Blocks.RED_SANDSTONE) {
-            return blockstate.setValue(SAMPLEFLAVOUR, SampleFlavour.RED_SANDY);
+            return blockstate.setValue(SAMPLEFLAVOUR, SampleFlavour.RED_SANDY).setValue(WATERLOGGED, Boolean.valueOf(shouldBeWaterlogged));
         }
-        return this.defaultBlockState();
+        return this.defaultBlockState().setValue(WATERLOGGED, Boolean.valueOf(shouldBeWaterlogged));
     }
 
 
