@@ -17,6 +17,7 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import net.neoforged.neoforge.common.data.internal.NeoForgeItemTagsProvider;
 
 import java.util.Set;
 
@@ -59,6 +60,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createMultipleOreDrops(ModBlocks.NETHER_QUARTZ_SAMPLE.get(), Items.QUARTZ, 0, 1));
         add(ModBlocks.QUARTZ_SAMPLE.get(),
                 block -> createMultipleOreDrops(ModBlocks.QUARTZ_SAMPLE.get(), Items.QUARTZ, 0, 1));
+        add(ModBlocks.ANDESITE_SAMPLE.get(),
+                block -> createMultipleOreDrops(ModBlocks.QUARTZ_SAMPLE.get(), Items.ANDESITE, 0, 1));
+//        add(ModBlocks.ZINC_SAMPLE.get(),
+//                block -> createMultipleOreDrops(ModBlocks.ZINC_SAMPLE.get(), , 0, 1));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block pBlock, Item item, float minDrops, float maxDrops) {

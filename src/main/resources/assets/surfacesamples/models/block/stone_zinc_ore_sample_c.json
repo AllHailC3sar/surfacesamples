@@ -1,0 +1,7 @@
+{
+    "parent": "surfacesamples:block/ore_sample_c",
+    "textures": {
+        "ore": "surfacesamples:block/create_zinc_ore",
+        "stone": "minecraft:block/andesite"
+    }
+}

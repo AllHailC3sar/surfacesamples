@@ -129,6 +129,18 @@ public class ModBlocks {
                     .sound(SoundType.TUFF)
                     .noOcclusion()
             ));
+    public static final DeferredBlock<Block> ZINC_SAMPLE = registerBlock("zinc_ore_sample",
+            () -> new SampleBlock(BlockBehaviour.Properties.of()
+                    .strength(0.1f)
+                    .sound(SoundType.TUFF)
+                    .noOcclusion()
+            ));
+    public static final DeferredBlock<Block> ANDESITE_SAMPLE = registerBlock("andesite_sample",
+            () -> new SampleBlock(BlockBehaviour.Properties.of()
+                    .strength(0.1f)
+                    .sound(SoundType.TUFF)
+                    .noOcclusion()
+            ));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
