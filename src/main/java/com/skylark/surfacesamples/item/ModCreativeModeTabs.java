@@ -49,6 +49,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.TEST);
                         output.accept(ModItems.REDSTONE_SHARD);
                         output.accept(ModItems.GLOWQUARTZ_SHARD);
+                        output.accept(ModItems.ANDESITE_CHUNK);
                     }).build());
 
     public static void register(IEventBus eventBus) {

@@ -2,6 +2,7 @@
   "item.surfacesamples.testitem": "Test Item!",
   "item.surfacesamples.redstone_shard": "Shard of Crystallised Redstone",
   "item.surfacesamples.glowquartz_shard": "Shard of Glowquartz",
+  "item.surfacesamples.andesite_chunk": "Andesite Chunk",
 
   "block.surfacesamples.crystallised_redstone_block": "Block of Crystallised Redstone",
   "block.surfacesamples.glowquartz_block": "Block of Glowquartz",
@@ -15,6 +16,12 @@
   "block.surfacesamples.iron_ore_sample": "Iron Ore Sample",
   "block.surfacesamples.lapis_ore_sample": "Lapis Ore Sample",
   "block.surfacesamples.redstone_ore_sample": "Redstone Ore Sample",
+  "block.surfacesamples.ancient_debris_sample": "Ancient Debris Sample",
+  "block.surfacesamples.andesite_sample": "Andesite Sample",
+  "block.surfacesamples.nether_gold_ore_sample": "Nether Gold Ore Sample",
+  "block.surfacesamples.nether_quartz_ore_sample": "Nether Quartz Ore Sample",
+  "block.surfacesamples.quartz_ore_sample": "Quartz Ore Sample",
+  "block.surfacesamples.zinc_ore_sample": "Zinc Ore Sample",
 
   "creativetab.surfacesamples.blocks": "Surface Samples Blocks",
   "creativetab.surfacesamples.items": "Surface Samples Items",

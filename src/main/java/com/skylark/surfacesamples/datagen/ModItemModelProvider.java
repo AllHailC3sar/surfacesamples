@@ -17,5 +17,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.GLOWQUARTZ_SHARD.get());
         basicItem(ModItems.REDSTONE_SHARD.get());
         basicItem(ModItems.TEST.get());
+        basicItem(ModItems.ANDESITE_CHUNK.get());
     }
 }

@@ -12,6 +12,7 @@ import net.minecraft.world.item.crafting.BlastingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
 import java.util.List;
@@ -33,6 +34,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("SSS")
                 .define('S', ModItems.REDSTONE_SHARD.get())
                 .unlockedBy("has_redstone_shard", has(ModItems.REDSTONE_SHARD)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.ANDESITE)
+                .pattern("CCC")
+                .pattern("CCC")
+                .pattern("CCC")
+                .define('C', ModItems.ANDESITE_CHUNK.get())
+                .unlockedBy("has_andesite_chunk", has(ModItems.ANDESITE_CHUNK)).save(recipeOutput);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.REDSTONE, 1)
                 .requires(ModItems.REDSTONE_SHARD)

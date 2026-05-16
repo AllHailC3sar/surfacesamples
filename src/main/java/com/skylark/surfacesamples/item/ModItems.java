@@ -20,6 +20,9 @@ public class ModItems {
     public static final DeferredItem<Item> GLOWQUARTZ_SHARD = ITEMS.register("glowquartz_shard",
             () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> ANDESITE_CHUNK = ITEMS.register("andesite_chunk",
+            () -> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
