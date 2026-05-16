@@ -38,7 +38,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModItems.REDSTONE_SHARD)
                 .unlockedBy("has_redstone_shard", has(ModItems.REDSTONE_SHARD)).save(recipeOutput, "surfacesamples:redstone_from_shard");
 
-        crystallisation(recipeOutput, REDSTONE_CRYSTALLISATION, RecipeCategory.MISC, ModItems.REDSTONE_SHARD.get(), 0.25f, 650, "redstone");
+        crystallisation(recipeOutput, REDSTONE_CRYSTALLISATION, RecipeCategory.MISC, ModItems.REDSTONE_SHARD.get(), 0.25f, 300, "redstone");
     }
 
 
