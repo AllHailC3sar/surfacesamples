@@ -18,7 +18,7 @@ public class ModCreativeModeTabs {
 
     public static final Supplier<CreativeModeTab> SURFACE_SAMPLES_BLOCKS_TAB = CREATIVE_MODE_TAB.register("surface_samples_blocks_tab",
             () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(ModBlocks.GLOWQUARTZ_BLOCK))
+                    .icon(() -> new ItemStack(ModBlocks.REDSTONE_SAMPLE))
                     .title(Component.translatable("creativetab.surfacesamples.blocks"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModBlocks.GLOWQUARTZ_BLOCK);
@@ -43,7 +43,7 @@ public class ModCreativeModeTabs {
     public static final Supplier<CreativeModeTab> SURFACE_SAMPLES_ITEMS_TAB = CREATIVE_MODE_TAB.register("surface_samples_items_tab",
             () -> CreativeModeTab.builder()
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(SurfaceSamples.MOD_ID, "surface_samples_blocks_tab"))
-                    .icon(() -> new ItemStack(ModItems.TEST.get()))
+                    .icon(() -> new ItemStack(ModItems.GLOWQUARTZ_SHARD.get()))
                     .title(Component.translatable("creativetab.surfacesamples.items"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.TEST);
