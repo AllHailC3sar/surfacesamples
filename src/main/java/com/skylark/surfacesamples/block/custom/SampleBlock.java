@@ -10,6 +10,7 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
@@ -113,6 +114,10 @@ import org.jetbrains.annotations.Nullable;
             level.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
         }
 
+        if (!canSurvive(state, level, pos)){
+            return Blocks.AIR.defaultBlockState();
+        }
+
         return direction == Direction.DOWN
                 ? flavourGetter(facingState, state) // technically this is poor form but I couldn't figure out how to do it otherwise
                 : super.updateShape(state, direction, facingState, level, pos, facingPos);
@@ -122,6 +127,11 @@ import org.jetbrains.annotations.Nullable;
     protected FluidState getFluidState(BlockState state){
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
+
+        @Override
+        protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+            return !level.isEmptyBlock(pos.below());
+        }
 }
 
 
