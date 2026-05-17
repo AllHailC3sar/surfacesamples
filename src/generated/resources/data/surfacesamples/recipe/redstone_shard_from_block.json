@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "surfacesamples:crystallised_redstone_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "surfacesamples:redstone_shard"
+  }
+}

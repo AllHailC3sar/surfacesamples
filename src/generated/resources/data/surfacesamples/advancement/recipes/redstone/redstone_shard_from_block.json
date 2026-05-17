@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_redstone_shard": {
+      "conditions": {
+        "items": [
+          {
+            "items": "surfacesamples:redstone_shard"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "surfacesamples:redstone_shard_from_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_redstone_shard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "surfacesamples:redstone_shard_from_block"
+    ]
+  }
+}
