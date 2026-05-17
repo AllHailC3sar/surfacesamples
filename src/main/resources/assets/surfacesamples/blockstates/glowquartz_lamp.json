@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "surfacesamples:block/glowquartz_lamp"
+    },
+    "lit=true": {
+      "model": "surfacesamples:block/glowquartz_lamp_lit"
+    }
+  }
+}

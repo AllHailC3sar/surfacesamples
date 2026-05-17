@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "G": {
+      "item": "minecraft:glass_pane"
+    },
+    "N": {
+      "item": "minecraft:iron_nugget"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "S": {
+      "item": "surfacesamples:glowquartz_shard"
+    }
+  },
+  "pattern": [
+    "NGN",
+    "GSG",
+    "RGR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "surfacesamples:glowquartz_lamp"
+  }
+}

@@ -28,21 +28,46 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     protected void buildRecipes(RecipeOutput recipeOutput) {
         List<ItemLike> REDSTONE_CRYSTALLISATION = List.of(Items.REDSTONE);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CRYSTALLISED_REDSTONE_BLOCK.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ModBlocks.CRYSTALLISED_REDSTONE_BLOCK.get())
                 .pattern("SSS")
                 .pattern("SSS")
                 .pattern("SSS")
-                .define('S', ModItems.REDSTONE_SHARD.get())
-                .unlockedBy("has_redstone_shard", has(ModItems.REDSTONE_SHARD)).save(recipeOutput);
+                .define('S', ModItems.REDSTONE_SHARD)
+                .unlockedBy("has_redstone_shard", has(ModItems.REDSTONE_SHARD)).save(recipeOutput, "surfacesamples:crystallised_redstone_block_from_shards");
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.REDSTONE, ModItems.REDSTONE_SHARD, 9)
+                .requires(ModBlocks.CRYSTALLISED_REDSTONE_BLOCK.get())
+                .unlockedBy("has_redstone_shard", has(ModItems.REDSTONE_SHARD)).save(recipeOutput, "surfacesamples:redstone_shard_from_block");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ModBlocks.GLOWQUARTZ_BLOCK.get())
+                .pattern("GGG")
+                .pattern("GGG")
+                .pattern("GGG")
+                .define('G', ModItems.GLOWQUARTZ_SHARD)
+                .unlockedBy("has_glowquartz_shard", has(ModItems.GLOWQUARTZ_SHARD)).save(recipeOutput, "surfacesamples:glowquartz_block_from_shards");
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GLOWQUARTZ_SHARD, 9)
+                .requires(ModBlocks.GLOWQUARTZ_BLOCK.get())
+                .unlockedBy("has_glowquartz_shard", has(ModItems.GLOWQUARTZ_SHARD)).save(recipeOutput, "surfacesamples:glowquartz_shard_from_block");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.ANDESITE)
                 .pattern("CCC")
                 .pattern("CCC")
                 .pattern("CCC")
-                .define('C', ModItems.ANDESITE_CHUNK.get())
-                .unlockedBy("has_andesite_chunk", has(ModItems.ANDESITE_CHUNK)).save(recipeOutput);
+                .define('C', ModItems.ANDESITE_CHUNK)
+                .unlockedBy("has_andesite_chunk", has(ModItems.ANDESITE_CHUNK)).save(recipeOutput, "surfacesamples:andesite_block_from_chunks");
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.REDSTONE, 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ModBlocks.GLOWQUARTZ_LAMP.get())
+                .pattern("NGN")
+                .pattern("GSG")
+                .pattern("RGR")
+                .define('S', ModItems.GLOWQUARTZ_SHARD)
+                .define('G', Items.GLASS_PANE)
+                .define('R', Items.REDSTONE)
+                .define('N', Items.IRON_NUGGET)
+                .unlockedBy("has_glowquartz_shard", has(ModItems.GLOWQUARTZ_SHARD)).save(recipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.REDSTONE, Items.REDSTONE, 1)
                 .requires(ModItems.REDSTONE_SHARD)
                 .unlockedBy("has_redstone_shard", has(ModItems.REDSTONE_SHARD)).save(recipeOutput, "surfacesamples:redstone_from_shard");
 

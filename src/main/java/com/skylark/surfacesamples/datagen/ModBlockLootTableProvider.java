@@ -30,6 +30,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected void generate() {
         add(ModBlocks.GLOWQUARTZ_BLOCK.get(),
                 block -> createMultipleOreDrops(ModBlocks.GLOWQUARTZ_BLOCK.get(), ModItems.GLOWQUARTZ_SHARD.get(), 4, 9));
+        dropSelf(ModBlocks.GLOWQUARTZ_LAMP.get());
 
         add(ModBlocks.CRYSTALLISED_REDSTONE_BLOCK.get(),
                 block -> createMultipleOreDrops(ModBlocks.CRYSTALLISED_REDSTONE_BLOCK.get(), ModItems.REDSTONE_SHARD.get(), 4, 9));

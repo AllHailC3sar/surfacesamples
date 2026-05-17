@@ -37,7 +37,6 @@ public class ModBlocks {
     public static final DeferredBlock<Block> CRYSTALLISED_REDSTONE_BLOCK = registerBlock("crystallised_redstone_block",
             () -> new ConcentratedRedstoneOre(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.FIRE)
-                    .requiresCorrectToolForDrops()
                     .lightLevel(poweredBlockEmission(9))
                     .strength(3.0F, 6.0F)
                     .sound(SoundType.AMETHYST)
@@ -45,9 +44,17 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> GLOWQUARTZ_BLOCK = registerBlock("glowquartz_block",
             () -> new RedstoneLampBlock(BlockBehaviour.Properties.of()
-                    .lightLevel(litBlockEmission(15))
+                    .lightLevel(litBlockEmission(7))
                     .strength(2.0F)
                     .sound(SoundType.AMETHYST)
+                    .isValidSpawn(Blocks::always)
+            ));
+
+    public static final DeferredBlock<Block> GLOWQUARTZ_LAMP = registerBlock("glowquartz_lamp",
+            () -> new RedstoneLampBlock(BlockBehaviour.Properties.of()
+                    .lightLevel(litBlockEmission(15))
+                    .strength(2.0F)
+                    .sound(SoundType.GLASS)
                     .isValidSpawn(Blocks::always)
             ));
 
@@ -134,6 +141,7 @@ public class ModBlocks {
                     .strength(0.1f)
                     .sound(SoundType.TUFF)
                     .noOcclusion()
+                    .noLootTable()
             ));
     public static final DeferredBlock<Block> ANDESITE_SAMPLE = registerBlock("andesite_sample",
             () -> new SampleBlock(BlockBehaviour.Properties.of()
