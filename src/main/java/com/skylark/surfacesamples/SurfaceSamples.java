@@ -78,6 +78,7 @@ public class SurfaceSamples {
         if(event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
             event.accept(ModBlocks.CRYSTALLISED_REDSTONE_BLOCK);
             event.accept(ModBlocks.GLOWQUARTZ_BLOCK);
+            event.accept(ModBlocks.GLOWQUARTZ_LAMP);
         }
     }
 
