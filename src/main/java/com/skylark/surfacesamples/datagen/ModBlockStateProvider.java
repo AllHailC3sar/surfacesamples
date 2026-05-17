@@ -26,7 +26,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 //        ModelFile sampleC = models().withExistingParent("sample_c", this.modLoc("block/ore_sample_c"));
 //        ModelFile sampleD = models().withExistingParent("sample_d", this.modLoc("block/ore_sample_d"));
 
-        blockWithItem(ModBlocks.CRYSTALLISED_REDSTONE_BLOCK);
+       ;
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {
