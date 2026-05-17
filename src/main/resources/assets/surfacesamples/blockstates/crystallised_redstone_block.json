@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "surfacesamples:block/crystallised_redstone_block"
+    },
+    "powered=true": {
+      "model": "surfacesamples:block/crystallised_redstone_block_lit"
+    }
+  }
+}
