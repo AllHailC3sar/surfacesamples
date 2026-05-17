@@ -88,7 +88,7 @@ import org.jetbrains.annotations.Nullable;
 
         if (context.getLevel().getBlockState(context.getClickedPos().below()).getBlock() == Blocks.SAND || context.getLevel().getBlockState(context.getClickedPos().below()).getBlock() == Blocks.SANDSTONE) {
             return blockstate.setValue(SAMPLEFLAVOUR, SampleFlavour.SANDY).setValue(WATERLOGGED, Boolean.valueOf(shouldBeWaterlogged));
-        } else if (context.getLevel().getBlockState(context.getClickedPos().below()).getBlock() == Blocks.RED_SAND || context.getLevel().getBlockState(context.getClickedPos().below()).getBlock() == Blocks.RED_SANDSTONE) {
+        } else if (context.getLevel().getBlockState(context.getClickedPos().below()).getBlock() == Blocks.RED_SAND || context.getLevel().getBlockState(context.getClickedPos().below()).getBlock() == Blocks.RED_SANDSTONE || context.getLevel().getBlockState(context.getClickedPos().below()).is(BlockTags.BADLANDS_TERRACOTTA)) {
             return blockstate.setValue(SAMPLEFLAVOUR, SampleFlavour.RED_SANDY).setValue(WATERLOGGED, Boolean.valueOf(shouldBeWaterlogged));
         }
         return this.defaultBlockState().setValue(WATERLOGGED, Boolean.valueOf(shouldBeWaterlogged));
@@ -102,7 +102,7 @@ import org.jetbrains.annotations.Nullable;
     private BlockState flavourGetter (BlockState belowState, BlockState state) {
         if (belowState.is(Blocks.SAND) || belowState.is(Blocks.SANDSTONE)) {
             return state.setValue(SAMPLEFLAVOUR, SampleFlavour.SANDY);
-        } else if (belowState.is(Blocks.RED_SAND) || belowState.is(Blocks.RED_SANDSTONE)) {
+        } else if (belowState.is(Blocks.RED_SAND) || belowState.is(Blocks.RED_SANDSTONE) || belowState.is(BlockTags.BADLANDS_TERRACOTTA)) {
             return state.setValue(SAMPLEFLAVOUR, SampleFlavour.RED_SANDY);
         }
         return this.defaultBlockState();
