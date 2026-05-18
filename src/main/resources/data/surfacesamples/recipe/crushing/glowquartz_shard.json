@@ -1,0 +1,27 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "surfacesamples:glowquartz_block"
+    }
+  ],
+  "processing_time": 150,
+  "results": [
+    {
+      "count": 9,
+      "id": "surfacesamples:glowquartz_shard"
+    },
+    {
+      "chance": 0.25,
+      "id": "minecraft:glowstone_dust"
+    },
+    {
+      "chance": 0.5,
+      "id": "overworldquartzore:quartz_fragment"
+    },
+    {
+      "chance": 0.5,
+      "id": "create:experience_nugget"
+    }
+  ]
+}

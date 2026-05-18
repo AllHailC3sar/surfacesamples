@@ -1,0 +1,23 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "surfacesamples:crystallised_redstone_block"
+    }
+  ],
+  "processing_time": 150,
+  "results": [
+    {
+      "count": 9,
+      "id": "surfacesamples:redstone_shard"
+    },
+    {
+      "chance": 0.5,
+      "id": "surfacesamples:redstone_shard"
+    },
+    {
+      "chance": 0.75,
+      "id": "create:experience_nugget"
+    }
+  ]
+}

@@ -75,6 +75,7 @@ public class ModBlocks {
                     .strength(0.1f)
                     .sound(SoundType.TUFF)
                     .noOcclusion()
+//                    .noLootTable()
             ));
     public static final DeferredBlock<Block> DIAMOND_SAMPLE = registerBlock("diamond_ore_sample",
             () -> new SampleBlock(BlockBehaviour.Properties.of()
@@ -141,7 +142,7 @@ public class ModBlocks {
                     .strength(0.1f)
                     .sound(SoundType.TUFF)
                     .noOcclusion()
-                    .noLootTable()
+//                    .noLootTable()
             ));
     public static final DeferredBlock<Block> ANDESITE_SAMPLE = registerBlock("andesite_sample",
             () -> new SampleBlock(BlockBehaviour.Properties.of()
