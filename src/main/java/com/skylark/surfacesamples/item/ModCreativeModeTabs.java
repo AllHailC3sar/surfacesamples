@@ -22,6 +22,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.surfacesamples.blocks"))
                     .displayItems((parameters, output) -> {
                         output.accept(ModBlocks.GLOWQUARTZ_BLOCK);
+                        output.accept(ModBlocks.POLISHED_GLOWQUARTZ_BLOCK);
                         output.accept(ModBlocks.GLOWQUARTZ_LAMP);
                         output.accept(ModBlocks.CRYSTALLISED_REDSTONE_BLOCK);
                         output.accept(ModBlocks.TEST_SAMPLE);

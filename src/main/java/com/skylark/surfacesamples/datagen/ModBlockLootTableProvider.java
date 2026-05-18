@@ -31,6 +31,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         add(ModBlocks.GLOWQUARTZ_BLOCK.get(),
                 block -> createMultipleOreDrops(ModBlocks.GLOWQUARTZ_BLOCK.get(), ModItems.GLOWQUARTZ_SHARD.get(), 4, 9));
         dropSelf(ModBlocks.GLOWQUARTZ_LAMP.get());
+        dropSelf(ModBlocks.POLISHED_GLOWQUARTZ_BLOCK.get());
 
         add(ModBlocks.CRYSTALLISED_REDSTONE_BLOCK.get(),
                 block -> createMultipleOreDrops(ModBlocks.CRYSTALLISED_REDSTONE_BLOCK.get(), ModItems.REDSTONE_SHARD.get(), 4, 9));
@@ -39,8 +40,6 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createMultipleOreDrops(ModBlocks.TEST_SAMPLE.get(), Items.IRON_NUGGET, 0, 3));
         add(ModBlocks.COAL_SAMPLE.get(),
                 block -> createMultipleOreDrops(ModBlocks.COAL_SAMPLE.get(), Items.COAL, 1, 1));
-        add(ModBlocks.COPPER_SAMPLE.get(),
-                block -> createMultipleOreDrops(ModBlocks.COPPER_SAMPLE.get(), Items.RAW_COPPER, 0, 1));
         add(ModBlocks.DIAMOND_SAMPLE.get(),
                 block -> createMultipleOreDrops(ModBlocks.DIAMOND_SAMPLE.get(), Items.DIAMOND, 0, 1));
         add(ModBlocks.EMERALD_SAMPLE.get(),
@@ -57,10 +56,6 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createMultipleOreDrops(ModBlocks.ANCIENT_DEBRIS_SAMPLE.get(), Items.NETHERITE_SCRAP, 0, 1));
         add(ModBlocks.NETHER_GOLD_SAMPLE.get(),
                 block -> createMultipleOreDrops(ModBlocks.NETHER_GOLD_SAMPLE.get(), Items.GOLD_NUGGET, 0, 7));
-        add(ModBlocks.NETHER_QUARTZ_SAMPLE.get(),
-                block -> createMultipleOreDrops(ModBlocks.NETHER_QUARTZ_SAMPLE.get(), Items.QUARTZ, 0, 1));
-        add(ModBlocks.QUARTZ_SAMPLE.get(),
-                block -> createMultipleOreDrops(ModBlocks.QUARTZ_SAMPLE.get(), Items.QUARTZ, 0, 1));
         add(ModBlocks.ANDESITE_SAMPLE.get(),
                 block -> createMultipleOreDrops(ModBlocks.ANDESITE_SAMPLE.get(), ModItems.ANDESITE_CHUNK.get(), 1, 3));
     }

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "Q": {
+      "item": "minecraft:quartz"
+    }
+  },
+  "pattern": [
+    "QG",
+    "GQ"
+  ],
+  "result": {
+    "count": 4,
+    "id": "surfacesamples:glowquartz_shard"
+  }
+}

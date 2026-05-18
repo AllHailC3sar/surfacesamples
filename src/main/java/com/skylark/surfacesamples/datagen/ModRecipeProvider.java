@@ -7,12 +7,10 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.AbstractCookingRecipe;
-import net.minecraft.world.item.crafting.BlastingRecipe;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.StonecutterBlock;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 
 import java.util.List;
@@ -39,12 +37,23 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.CRYSTALLISED_REDSTONE_BLOCK.get())
                 .unlockedBy("has_redstone_shard", has(ModItems.REDSTONE_SHARD)).save(recipeOutput, "surfacesamples:redstone_shard_from_block");
 
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ModBlocks.GLOWQUARTZ_BLOCK.get()), RecipeCategory.REDSTONE, ModBlocks.POLISHED_GLOWQUARTZ_BLOCK.get(), 1)
+                .unlockedBy("has_glowquartz", has(ModItems.GLOWQUARTZ_SHARD))
+                .save(recipeOutput, "polished_glowquartz_from_stonecutting");
+
         ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, ModBlocks.GLOWQUARTZ_BLOCK.get())
                 .pattern("GGG")
                 .pattern("GGG")
                 .pattern("GGG")
                 .define('G', ModItems.GLOWQUARTZ_SHARD)
                 .unlockedBy("has_glowquartz_shard", has(ModItems.GLOWQUARTZ_SHARD)).save(recipeOutput, "surfacesamples:glowquartz_block_from_shards");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GLOWQUARTZ_SHARD, 4)
+                .pattern("QG")
+                .pattern("GQ")
+                .define('G', Items.GLOWSTONE_DUST)
+                .define('Q', Items.QUARTZ)
+                .unlockedBy("has_glowquartz_shard", has(ModItems.GLOWQUARTZ_SHARD)).save(recipeOutput);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GLOWQUARTZ_SHARD, 9)
                 .requires(ModBlocks.GLOWQUARTZ_BLOCK.get())

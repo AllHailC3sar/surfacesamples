@@ -44,7 +44,15 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> GLOWQUARTZ_BLOCK = registerBlock("glowquartz_block",
             () -> new RedstoneLampBlock(BlockBehaviour.Properties.of()
-                    .lightLevel(litBlockEmission(7))
+                    .lightLevel(litBlockEmission(9))
+                    .strength(2.0F)
+                    .sound(SoundType.AMETHYST)
+                    .isValidSpawn(Blocks::always)
+            ));
+
+    public static final DeferredBlock<Block> POLISHED_GLOWQUARTZ_BLOCK = registerBlock("polished_glowquartz_block",
+            () -> new RedstoneLampBlock(BlockBehaviour.Properties.of()
+                    .lightLevel(litBlockEmission(15))
                     .strength(2.0F)
                     .sound(SoundType.AMETHYST)
                     .isValidSpawn(Blocks::always)
@@ -130,12 +138,14 @@ public class ModBlocks {
                     .strength(0.1f)
                     .sound(SoundType.NETHERRACK)
                     .noOcclusion()
+//                    .noLootTable()
             ));
     public static final DeferredBlock<Block> QUARTZ_SAMPLE = registerBlock("quartz_ore_sample",
             () -> new SampleBlock(BlockBehaviour.Properties.of()
                     .strength(0.1f)
                     .sound(SoundType.TUFF)
                     .noOcclusion()
+//                    .noLootTable()
             ));
     public static final DeferredBlock<Block> ZINC_SAMPLE = registerBlock("zinc_ore_sample",
             () -> new SampleBlock(BlockBehaviour.Properties.of()
