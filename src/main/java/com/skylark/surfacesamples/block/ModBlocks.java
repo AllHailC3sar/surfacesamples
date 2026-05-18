@@ -66,12 +66,12 @@ public class ModBlocks {
                     .isValidSpawn(Blocks::always)
             ));
 
-    public static final DeferredBlock<Block> TEST_SAMPLE = registerBlock("test_sample",
-            () -> new SampleBlock(BlockBehaviour.Properties.of()
-                    .strength(0.1f)
-                    .sound(SoundType.TUFF)
-                    .noOcclusion()
-            ));
+//    public static final DeferredBlock<Block> TEST_SAMPLE = registerBlock("test_sample",
+//            () -> new SampleBlock(BlockBehaviour.Properties.of()
+//                    .strength(0.1f)
+//                    .sound(SoundType.TUFF)
+//                    .noOcclusion()
+//            ));
     public static final DeferredBlock<Block> COAL_SAMPLE = registerBlock("coal_ore_sample",
             () -> new SampleBlock(BlockBehaviour.Properties.of()
                     .strength(0.1f)

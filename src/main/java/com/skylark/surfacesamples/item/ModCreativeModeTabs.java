@@ -25,7 +25,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.POLISHED_GLOWQUARTZ_BLOCK);
                         output.accept(ModBlocks.GLOWQUARTZ_LAMP);
                         output.accept(ModBlocks.CRYSTALLISED_REDSTONE_BLOCK);
-                        output.accept(ModBlocks.TEST_SAMPLE);
+//                        output.accept(ModBlocks.TEST_SAMPLE);
                         output.accept(ModBlocks.COAL_SAMPLE);
                         output.accept(ModBlocks.COPPER_SAMPLE);
                         output.accept(ModBlocks.DIAMOND_SAMPLE);
@@ -48,7 +48,7 @@ public class ModCreativeModeTabs {
                     .icon(() -> new ItemStack(ModItems.GLOWQUARTZ_SHARD.get()))
                     .title(Component.translatable("creativetab.surfacesamples.items"))
                     .displayItems((parameters, output) -> {
-                        output.accept(ModItems.TEST);
+//                        output.accept(ModItems.TEST);
                         output.accept(ModItems.REDSTONE_SHARD);
                         output.accept(ModItems.GLOWQUARTZ_SHARD);
                         output.accept(ModItems.ANDESITE_CHUNK);

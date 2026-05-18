@@ -10,9 +10,9 @@ public class ModItems {
     // create a deferred register called ITEMS that we can add items to
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(SurfaceSamples.MOD_ID);
 
-    // add an item called testitem to the ITEMS register
-    public static final DeferredItem<Item> TEST = ITEMS.register("testitem",
-            () -> new Item(new Item.Properties()));
+//    // add an item called testitem to the ITEMS register
+//    public static final DeferredItem<Item> TEST = ITEMS.register("testitem",
+//            () -> new Item(new Item.Properties()));
 
     public static final DeferredItem<Item> REDSTONE_SHARD = ITEMS.register("redstone_shard",
             () -> new Item(new Item.Properties()));

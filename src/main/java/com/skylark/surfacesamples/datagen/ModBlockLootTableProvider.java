@@ -34,10 +34,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.POLISHED_GLOWQUARTZ_BLOCK.get());
 
         add(ModBlocks.CRYSTALLISED_REDSTONE_BLOCK.get(),
-                block -> createMultipleOreDrops(ModBlocks.CRYSTALLISED_REDSTONE_BLOCK.get(), ModItems.REDSTONE_SHARD.get(), 4, 9));
+                block -> createMultipleOreDrops(ModBlocks.CRYSTALLISED_REDSTONE_BLOCK.get(), ModItems.REDSTONE_SHARD.get(), 7, 9));
 
-        add(ModBlocks.TEST_SAMPLE.get(),
-                block -> createMultipleOreDrops(ModBlocks.TEST_SAMPLE.get(), Items.IRON_NUGGET, 0, 3));
+//        add(ModBlocks.TEST_SAMPLE.get(),
+//                block -> createMultipleOreDrops(ModBlocks.TEST_SAMPLE.get(), Items.IRON_NUGGET, 0, 3));
         add(ModBlocks.COAL_SAMPLE.get(),
                 block -> createMultipleOreDrops(ModBlocks.COAL_SAMPLE.get(), Items.COAL, 1, 1));
         add(ModBlocks.DIAMOND_SAMPLE.get(),

@@ -72,12 +72,13 @@ public class SurfaceSamples {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-            event.accept(ModItems.TEST);
+//            event.accept(ModItems.TEST);
         }
 
         if(event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
             event.accept(ModBlocks.CRYSTALLISED_REDSTONE_BLOCK);
             event.accept(ModBlocks.GLOWQUARTZ_BLOCK);
+            event.accept(ModBlocks.POLISHED_GLOWQUARTZ_BLOCK);
             event.accept(ModBlocks.GLOWQUARTZ_LAMP);
         }
     }
