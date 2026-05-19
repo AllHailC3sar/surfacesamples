@@ -1,8 +1,13 @@
 package com.skylark.surfacesamples.block.custom;
 
+import com.skylark.surfacesamples.block.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.RandomSource;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -11,9 +16,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.*;
@@ -23,12 +26,15 @@ import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.Nullable;
 
 
-    public class SampleBlock extends Block implements SimpleWaterloggedBlock {
+public class SampleBlock extends Block implements SimpleWaterloggedBlock {
 
         public enum SampleFlavour implements StringRepresentable {
+            UNKNOWN("unknown"),
             STONY("stony"),
             SANDY("sandy"),
             RED_SANDY("red_sandy"),
@@ -108,22 +114,42 @@ import org.jetbrains.annotations.Nullable;
         return this.defaultBlockState();
     }
 
-    @Override
-    protected BlockState updateShape(BlockState state, Direction direction, BlockState facingState, LevelAccessor level, BlockPos pos, BlockPos facingPos) {
-        if (state.getValue(WATERLOGGED)) {
-            level.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
+//    @Override
+//    protected BlockState updateShape(BlockState state, Direction direction, BlockState facingState, LevelAccessor level, BlockPos pos, BlockPos facingPos) {
+//        if (state.getValue(WATERLOGGED)) {
+//            level.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
+//        }
+//
+//        if (!canSurvive(state, level, pos)){
+//            return Blocks.AIR.defaultBlockState();
+//        }
+//
+//        return direction == Direction.DOWN
+//                ? flavourGetter(facingState, state) // technically this feels like poor form but I couldn't figure out how to do it otherwise
+//                : super.updateShape(state, direction, facingState, level, pos, facingPos);
+//    }
+
+        @Override
+        protected void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
+            if (state.getValue(SAMPLEFLAVOUR) == SampleFlavour.UNKNOWN) {
+                if (level.getBlockState(pos.below()).getBlock() == Blocks.RED_SAND || level.getBlockState(pos.below()).getBlock() == Blocks.RED_SANDSTONE || level.getBlockState(pos.below()).getTags().toList().contains(BlockTags.BADLANDS_TERRACOTTA)) {
+                    level.setBlock(pos, state.setValue(SAMPLEFLAVOUR, SampleFlavour.RED_SANDY), 2);
+                } else if (level.getBlockState(pos.below()).getBlock() == Blocks.SAND || level.getBlockState(pos.below()).getBlock() == Blocks.SANDSTONE) {
+                    level.setBlock(pos, state.setValue(SAMPLEFLAVOUR, SampleFlavour.SANDY), 2);
+                } else {
+                    level.setBlock(pos, state.setValue(SAMPLEFLAVOUR, SampleFlavour.STONY), 2);
+                    super.tick(state, level, pos, random);
+                }
+            }
         }
 
-        if (!canSurvive(state, level, pos)){
-            return Blocks.AIR.defaultBlockState();
+        @Override
+        protected void onPlace(BlockState state, Level level, BlockPos pos, BlockState oldState, boolean movedByPiston) {
+            level.scheduleTick(pos, this, 0);
+            super.onPlace(state, level, pos, oldState, movedByPiston);
         }
 
-        return direction == Direction.DOWN
-                ? flavourGetter(facingState, state) // technically this is poor form but I couldn't figure out how to do it otherwise
-                : super.updateShape(state, direction, facingState, level, pos, facingPos);
-    }
-
-    @Override
+        @Override
     protected FluidState getFluidState(BlockState state){
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
