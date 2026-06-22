@@ -29,6 +29,7 @@ Inspiration from this mod stems from [oitsjustjose's Geolosys](https://modrinth.
 
 This is my first venture into minecraft modding, I hope you like it as much as I do :3
 
+![all samples](images/all%20blocks%20lit.png)
 
 Attribution/Credits:
 =======
