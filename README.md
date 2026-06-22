@@ -1,11 +1,15 @@
 Surface Samples
 =======
 
+![banner](images/banner.png)
+
 Surface Samples is a simple mod to do a simple thing: add small indicator blocks that worldgen mods can use as markers for ore deposits. I created this with EnderLanky's fantastic [Large Ore Deposits](https://www.curseforge.com/minecraft/mc-mods/large-ore-deposits) mod in mind, but you can use it with any mod that allows you to specify blocks as markers. You could even use them solely as decoration for creative builds. The samples drop nuggets of their respective ores when right-clicked or destroyed, and are waterloggable, and snowloggable with [Snow! Real Magic](https://modrinth.com/mod/snow-real-magic).
 
 There are ore samples for all vanilla and create ores, including nether variants for gold, quartz, and netherite. I've also included a non-nether variant of quartz, which by default drops [Sky's Overworld Quartz](https://modrinth.com/mod/skys-overworld-quartz) shards.
 
 There are blockstate variants for sandy and red sandy environments, these live under the `flavour` blockstate, the values are `stony`, `sandy`, and `red_sandy` I've included example configs for Large Ore Deposits [here](adlods%20example%20configs).
+
+![all samples](images/all%20samples.png)
 
 It also adds in four other blocks:
 - Crystallised redstone, which is a concentrated block of redstone that acts as a hybrid between a redstone block and redstone ore
@@ -35,6 +39,7 @@ Attribution/Credits:
 - Andesite chunks, glowquartz shard, and crystallised redstone shard textures adapted from [Malcomriley's Unused Textures](https://github.com/malcolmriley/unused-textures)
 - Glowquartz & crystallised redstone block textures also assembled from malcomriley's item sprites
 - Sample pickup behaviour inspired by [Geolosys](https://modrinth.com/mod/geolosys) and Vintage Story
+- Sample model inspired by Vintage Story
 
 
 Regarding Creativity
