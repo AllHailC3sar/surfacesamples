@@ -1,25 +1,42 @@
-
-Installation information
+Surface Samples
 =======
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+Surface Samples is a simple mod to do a simple thing: add small indicator blocks that worldgen mods can use as markers for ore deposits. I created this with EnderLanky's fantastic [Large Ore Deposits](https://www.curseforge.com/minecraft/mc-mods/large-ore-deposits) mod in mind, but you can use it with any mod that allows you to specify blocks as markers. You could even use them solely as decoration for creative builds. The samples drop nuggets of their respective ores when right-clicked or destroyed, and are waterloggable, and snowloggable with [Snow! Real Magic](https://modrinth.com/mod/snow-real-magic).
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+There are ore samples for all vanilla and create ores, including nether variants for gold, quartz, and netherite. I've also included a non-nether variant of quartz, which by default drops [Sky's Overworld Quartz](https://modrinth.com/mod/skys-overworld-quartz) shards.
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+There are blockstate variants for sandy and red sandy environments, these live under the `flavour` blockstate, the values are `stony`, `sandy`, and `red_sandy` I've included example configs for Large Ore Deposits [here](adlods%20example%20configs).
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+It also adds in four other blocks:
+- Crystallised redstone, which is a concentrated block of redstone that acts as a hybrid between a redstone block and redstone ore
+- Glowquartz, which is intended to be used as an early-game alternative to glowstone
+- Polished glowquartz, which has a different look and a higher light level
+- Glowquartz lamp, a redstone lamp equivalent
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+Intermediary items have been added for glowquartz, crystallised redstone, and andesite samples (since having a small sample drop an entire block felt strange).
+
+All blocks and items have [Create](https://modrinth.com/mod/create) integration out of the box.
+
+To change the drops of the samples, you can use a datapack, targeting `data/surfacesamples/loot_table/blocks`
+
+This mod was created for a private SMP I am setting up, and so will likely get intermittent updates, but feel free to suggest changes or ore samples you'd like to see, I'll try to get to them one way or another :)
+
+Inspiration from this mod stems from [oitsjustjose's Geolosys](https://modrinth.com/mod/geolosys) and Vintage Story's ore samples.
+
+This is my first venture into minecraft modding, I hope you like it as much as I do :3
+
+
+Attribution/Credits:
+=======
+- [Large Ore Deposits](https://www.curseforge.com/minecraft/mc-mods/large-ore-deposits) for inspiring me to make this mod in the first place
+- Quartz sample textures taken from [Sky's overworld quartz](https://modrinth.com/mod/skys-overworld-quartz)
+- Snippets of code from [Kaupenjoe's fantastic tutorial series](https://www.youtube.com/playlist?list=PLKGarocXCE1G6CQOoiYdMVx-E1d9F_itF)
+- Zinc ore texture from [Create](https://modrinth.com/mod/create)
+- Andesite chunks, glowquartz shard, and crystallised redstone shard textures adapted from [Malcomriley's Unused Textures](https://github.com/malcolmriley/unused-textures)
+- Glowquartz & crystallised redstone block textures also assembled from malcomriley's item sprites
+- Sample pickup behaviour inspired by [Geolosys](https://modrinth.com/mod/geolosys) and Vintage Story
+
+
+Regarding Creativity
+=======
+I do not and never will use AI in my creations. The code, models, and artwork in this may not be perfect, but they are mine, as are any modifications I've made to the sources listed above.
