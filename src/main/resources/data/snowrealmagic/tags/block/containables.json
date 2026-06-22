@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "surfacesamples:andesite_sample",
+    "surfacesamples:coal_ore_sample",
+    "surfacesamples:copper_ore_sample",
+    "surfacesamples:diamond_ore_sample",
+    "surfacesamples:emerald_ore_sample",
+    "surfacesamples:gold_ore_sample",
+    "surfacesamples:iron_ore_sample",
+    "surfacesamples:lapis_ore_sample",
+    "surfacesamples:quartz_ore_sample",
+    "surfacesamples:redstone_ore_sample",
+    "surfacesamples:zinc_ore_sample"
+  ]
+}
