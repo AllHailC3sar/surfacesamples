@@ -44,7 +44,7 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> GLOWQUARTZ_BLOCK = registerBlock("glowquartz_block",
             () -> new RedstoneLampBlock(BlockBehaviour.Properties.of()
-                    .lightLevel(litBlockEmission(9))
+                    .lightLevel(litBlockEmission(12))
                     .strength(2.0F)
                     .sound(SoundType.AMETHYST)
                     .isValidSpawn(Blocks::always)
