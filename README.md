@@ -31,6 +31,8 @@ This is my first venture into minecraft modding, I hope you like it as much as I
 
 ![all samples](images/all%20blocks%20lit.png)
 
+If you want to use this in a modpack be my guest! It'd be polite to credit me, but don't feel like you have to. If you use it in a video though, I'd appreciate credit. And if you use it to make something even cooler, show me!
+
 Attribution/Credits:
 =======
 - [Large Ore Deposits](https://www.curseforge.com/minecraft/mc-mods/large-ore-deposits) for inspiring me to make this mod in the first place
