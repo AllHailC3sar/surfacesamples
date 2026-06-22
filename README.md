@@ -33,6 +33,8 @@ This is my first venture into minecraft modding, I hope you like it as much as I
 
 ![all samples](images/all%20blocks%20lit.png)
 
+This project wouldn't exist without those credited below, so if you want to use this for inspiration or reference, go for it.
+
 If you want to use this in a modpack be my guest! It'd be polite to credit me, but don't feel like you have to. If you use it in a video though, I'd appreciate credit. And if you use it to make something even cooler, show me!
 
 Attribution/Credits:
