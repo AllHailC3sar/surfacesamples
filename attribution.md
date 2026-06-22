@@ -3,3 +3,4 @@ Snippets of code from [Kaupenjoe's fantastic tutorial series](https://www.youtub
 Zinc ore texture from [Create](https://modrinth.com/mod/create)
 Andesite chunks, glowquartz shard, and crystallised redstone shard textures adapted from [Malcomriley's Unused Textures](https://github.com/malcolmriley/unused-textures)
 Glowquartz & crystallised redstone block textures also assembled from malcomriley's item sprites
+Sample pickup behaviour inspired by [Geolosys](https://modrinth.com/mod/geolosys) and Vintage Story
