@@ -1,0 +1,7 @@
+{
+    "parent": "surfacesamples:block/ore_sample_d",
+    "textures": {
+        "ore": "surfacesamples:block/silver_ore",
+        "stone": "minecraft:block/stone"
+    }
+}
