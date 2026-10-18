@@ -41,6 +41,14 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.ANDESITE_SAMPLE);
                         output.accept(ModBlocks.FLINT_SAMPLE);
                         output.accept(ModBlocks.ZINC_SAMPLE);
+                        output.accept(ModBlocks.NICKEL_SAMPLE);
+                        output.accept(ModBlocks.LEAD_SAMPLE);
+                        output.accept(ModBlocks.SILVER_SAMPLE);
+                        output.accept(ModBlocks.ALUMINUM_SAMPLE);
+                        output.accept(ModBlocks.URANIUM_SAMPLE);
+                        output.accept(ModBlocks.OSMIUM_SAMPLE);
+                        output.accept(ModBlocks.FLUORITE_SAMPLE);
+                        output.accept(ModBlocks.TIN_SAMPLE);
                     }).build());
 
     public static final Supplier<CreativeModeTab> SURFACE_SAMPLES_ITEMS_TAB = CREATIVE_MODE_TAB.register("surface_samples_items_tab",
