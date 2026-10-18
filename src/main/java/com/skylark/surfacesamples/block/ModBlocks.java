@@ -160,6 +160,12 @@ public class ModBlocks {
                     .sound(SoundType.TUFF)
                     .noOcclusion()
             ));
+    public static final DeferredBlock<Block> FLINT_SAMPLE = registerBlock("flint_sample",
+            () -> new SampleBlock(BlockBehaviour.Properties.of()
+                    .strength(0.1f)
+                    .sound(SoundType.GRAVEL)
+                    .noOcclusion()
+            ));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

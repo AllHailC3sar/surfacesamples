@@ -24,6 +24,7 @@
   "block.surfacesamples.nether_quartz_ore_sample": "Nether Quartz Ore Sample",
   "block.surfacesamples.quartz_ore_sample": "Quartz Ore Sample",
   "block.surfacesamples.zinc_ore_sample": "Zinc Ore Sample",
+  "block.surfacesamples.flint_sample": "Flint Sample",
 
   "creativetab.surfacesamples.blocks": "Surface Samples Blocks",
   "creativetab.surfacesamples.items": "Surface Samples Items",

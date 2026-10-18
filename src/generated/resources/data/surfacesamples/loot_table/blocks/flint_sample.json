@@ -26,7 +26,7 @@
                   }
                 }
               ],
-              "name": "surfacesamples:test_sample"
+              "name": "surfacesamples:flint_sample"
             },
             {
               "type": "minecraft:item",
@@ -35,8 +35,8 @@
                   "add": false,
                   "count": {
                     "type": "minecraft:uniform",
-                    "max": 3.0,
-                    "min": 0.0
+                    "max": 1.0,
+                    "min": 1.0
                   },
                   "function": "minecraft:set_count"
                 },
@@ -49,7 +49,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "minecraft:iron_nugget"
+              "name": "minecraft:flint"
             }
           ]
         }
@@ -57,5 +57,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "surfacesamples:blocks/test_sample"
+  "random_sequence": "surfacesamples:blocks/flint_sample"
 }

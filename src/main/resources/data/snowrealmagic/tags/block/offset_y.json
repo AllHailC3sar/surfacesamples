@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "surfacesamples:andesite_sample",
+    "surfacesamples:flint_sample",
     "surfacesamples:coal_ore_sample",
     "surfacesamples:copper_ore_sample",
     "surfacesamples:diamond_ore_sample",

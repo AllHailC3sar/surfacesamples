@@ -39,6 +39,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.NETHER_QUARTZ_SAMPLE);
                         output.accept(ModBlocks.QUARTZ_SAMPLE);
                         output.accept(ModBlocks.ANDESITE_SAMPLE);
+                        output.accept(ModBlocks.FLINT_SAMPLE);
                         output.accept(ModBlocks.ZINC_SAMPLE);
                     }).build());
 
