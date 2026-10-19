@@ -17,7 +17,7 @@ Currently, there are also samples for the following mods' ores:
 There are blockstate variants for sandy and red sandy environments, these live under the `flavour` blockstate; the values are `stony`, `sandy`, and `red_sandy` Large Ore Deposits now has configs for Surface Samples by default!
 
 ![all samples](images/all%20samples.png)
-[Mekanism & ImEng samples](images/new%20samples.png)
+![Mekanism & ImEng samples](images/new%20samples.png)
 
 It also adds in four other blocks:
 - Crystallised redstone, which is a concentrated block of redstone that acts as a hybrid between a redstone block and redstone ore
