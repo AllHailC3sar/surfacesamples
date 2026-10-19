@@ -2,6 +2,6 @@
     "parent": "surfacesamples:block/ore_sample_c",
     "textures": {
         "ore": "surfacesamples:block/aluminum_ore",
-        "stone": "minecraft:block/red_standstone"
+        "stone": "minecraft:block/red_sandstone"
     }
 }
