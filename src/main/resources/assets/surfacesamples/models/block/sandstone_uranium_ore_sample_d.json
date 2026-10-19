@@ -1,7 +1,7 @@
 {
     "parent": "surfacesamples:block/ore_sample_d",
     "textures": {
-        "ore": "surfacesamples:block/uranium_ore",
+        "ore": "surfacesamples:block/sandstone_uranium_ore",
         "stone": "minecraft:block/sandstone"
     }
 }
