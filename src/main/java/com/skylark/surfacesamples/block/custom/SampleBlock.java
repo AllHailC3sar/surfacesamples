@@ -92,7 +92,7 @@ public class SampleBlock extends Block implements SimpleWaterloggedBlock {
             shouldBeWaterlogged = Boolean.valueOf(fluidstate.getType() == Fluids.WATER);
         }
 
-        if (context.getLevel().getBlockState(context.getClickedPos().below()).getBlock() == Blocks.SAND || context.getLevel().getBlockState(context.getClickedPos().below()).getBlock() == Blocks.SANDSTONE) {
+        if (context.getLevel().getBlockState(context.getClickedPos().below()).getBlock() == Blocks.SAND || context.getLevel().getBlockState(context.getClickedPos().below()).getBlock() == Blocks.SANDSTONE || context.getLevel().getBlockState(context.getClickedPos().below()).getBlock() == Blocks.SUSPICIOUS_SAND) {
             return blockstate.setValue(SAMPLEFLAVOUR, SampleFlavour.SANDY).setValue(WATERLOGGED, Boolean.valueOf(shouldBeWaterlogged));
         } else if (context.getLevel().getBlockState(context.getClickedPos().below()).getBlock() == Blocks.RED_SAND || context.getLevel().getBlockState(context.getClickedPos().below()).getBlock() == Blocks.RED_SANDSTONE || context.getLevel().getBlockState(context.getClickedPos().below()).is(BlockTags.BADLANDS_TERRACOTTA)) {
             return blockstate.setValue(SAMPLEFLAVOUR, SampleFlavour.RED_SANDY).setValue(WATERLOGGED, Boolean.valueOf(shouldBeWaterlogged));
@@ -106,7 +106,7 @@ public class SampleBlock extends Block implements SimpleWaterloggedBlock {
     }
 
     private BlockState flavourGetter (BlockState belowState, BlockState state) {
-        if (belowState.is(Blocks.SAND) || belowState.is(Blocks.SANDSTONE)) {
+        if (belowState.is(Blocks.SAND) || belowState.is(Blocks.SANDSTONE) || belowState.is(Blocks.SUSPICIOUS_SAND)) {
             return state.setValue(SAMPLEFLAVOUR, SampleFlavour.SANDY);
         } else if (belowState.is(Blocks.RED_SAND) || belowState.is(Blocks.RED_SANDSTONE) || belowState.is(BlockTags.BADLANDS_TERRACOTTA)) {
             return state.setValue(SAMPLEFLAVOUR, SampleFlavour.RED_SANDY);
@@ -134,7 +134,7 @@ public class SampleBlock extends Block implements SimpleWaterloggedBlock {
         if (state.getValue(SAMPLEFLAVOUR) == SampleFlavour.UNKNOWN) {
             if (level.getBlockState(pos.below()).getBlock() == Blocks.RED_SAND || level.getBlockState(pos.below()).getBlock() == Blocks.RED_SANDSTONE || level.getBlockState(pos.below()).getTags().toList().contains(BlockTags.BADLANDS_TERRACOTTA)) {
                 level.setBlock(pos, state.setValue(SAMPLEFLAVOUR, SampleFlavour.RED_SANDY), 2);
-            } else if (level.getBlockState(pos.below()).getBlock() == Blocks.SAND || level.getBlockState(pos.below()).getBlock() == Blocks.SANDSTONE) {
+            } else if (level.getBlockState(pos.below()).getBlock() == Blocks.SAND || level.getBlockState(pos.below()).getBlock() == Blocks.SANDSTONE || level.getBlockState(pos.below()).getBlock() == Blocks.SUSPICIOUS_SAND) {
                 level.setBlock(pos, state.setValue(SAMPLEFLAVOUR, SampleFlavour.SANDY), 2);
             } else {
                 level.setBlock(pos, state.setValue(SAMPLEFLAVOUR, SampleFlavour.STONY), 2);
