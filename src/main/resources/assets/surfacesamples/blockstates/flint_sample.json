@@ -1,49 +1,250 @@
 {
     "variants": {
-        "": [
+        "flavour=sandy": [
             {
-                "model": "surfacesamples:block/flint_sample_a"
+                "model": "surfacesamples:block/sandstone_flint_sample_a"
             },
             {
-                "model": "surfacesamples:block/flint_sample_a",
+                "model": "surfacesamples:block/sandstone_flint_sample_a",
                 "y": 90
             },
             {
-                "model": "surfacesamples:block/flint_sample_a",
+                "model": "surfacesamples:block/sandstone_flint_sample_a",
                 "y": 180
             },
             {
-                "model": "surfacesamples:block/flint_sample_a",
+                "model": "surfacesamples:block/sandstone_flint_sample_a",
                 "y": 270
             },
             {
-                "model": "surfacesamples:block/flint_sample_c"
+                "model": "surfacesamples:block/sandstone_flint_sample_b"
             },
             {
-                "model": "surfacesamples:block/flint_sample_c",
+                "model": "surfacesamples:block/sandstone_flint_sample_b",
                 "y": 90
             },
             {
-                "model": "surfacesamples:block/flint_sample_c",
+                "model": "surfacesamples:block/sandstone_flint_sample_b",
                 "y": 180
             },
             {
-                "model": "surfacesamples:block/flint_sample_c",
+                "model": "surfacesamples:block/sandstone_flint_sample_b",
                 "y": 270
             },
             {
-                "model": "surfacesamples:block/flint_sample_d"
+                "model": "surfacesamples:block/sandstone_flint_sample_c"
             },
             {
-                "model": "surfacesamples:block/flint_sample_d",
+                "model": "surfacesamples:block/sandstone_flint_sample_c",
                 "y": 90
             },
             {
-                "model": "surfacesamples:block/flint_sample_d",
+                "model": "surfacesamples:block/sandstone_flint_sample_c",
                 "y": 180
             },
             {
-                "model": "surfacesamples:block/flint_sample_d",
+                "model": "surfacesamples:block/sandstone_flint_sample_c",
+                "y": 270
+            },
+            {
+                "model": "surfacesamples:block/sandstone_flint_sample_d"
+            },
+            {
+                "model": "surfacesamples:block/sandstone_flint_sample_d",
+                "y": 90
+            },
+            {
+                "model": "surfacesamples:block/sandstone_flint_sample_d",
+                "y": 180
+            },
+            {
+                "model": "surfacesamples:block/sandstone_flint_sample_d",
+                "y": 270
+            }
+        ],
+        "flavour=red_sandy": [
+            {
+                "model": "surfacesamples:block/red_sandstone_flint_sample_a"
+            },
+            {
+                "model": "surfacesamples:block/red_sandstone_flint_sample_a",
+                "y": 90
+            },
+            {
+                "model": "surfacesamples:block/red_sandstone_flint_sample_a",
+                "y": 180
+            },
+            {
+                "model": "surfacesamples:block/red_sandstone_flint_sample_a",
+                "y": 270
+            },
+            {
+                "model": "surfacesamples:block/red_sandstone_flint_sample_b"
+            },
+            {
+                "model": "surfacesamples:block/red_sandstone_flint_sample_b",
+                "y": 90
+            },
+            {
+                "model": "surfacesamples:block/red_sandstone_flint_sample_b",
+                "y": 180
+            },
+            {
+                "model": "surfacesamples:block/red_sandstone_flint_sample_b",
+                "y": 270
+            },
+            {
+                "model": "surfacesamples:block/red_sandstone_flint_sample_c"
+            },
+            {
+                "model": "surfacesamples:block/red_sandstone_flint_sample_c",
+                "y": 90
+            },
+            {
+                "model": "surfacesamples:block/red_sandstone_flint_sample_c",
+                "y": 180
+            },
+            {
+                "model": "surfacesamples:block/red_sandstone_flint_sample_c",
+                "y": 270
+            },
+            {
+                "model": "surfacesamples:block/red_sandstone_flint_sample_d"
+            },
+            {
+                "model": "surfacesamples:block/red_sandstone_flint_sample_d",
+                "y": 90
+            },
+            {
+                "model": "surfacesamples:block/red_sandstone_flint_sample_d",
+                "y": 180
+            },
+            {
+                "model": "surfacesamples:block/red_sandstone_flint_sample_d",
+                "y": 270
+            }
+        ],
+        "flavour=stony": [
+            {
+                "model": "surfacesamples:block/stone_flint_sample_a"
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_a",
+                "y": 90
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_a",
+                "y": 180
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_a",
+                "y": 270
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_b"
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_b",
+                "y": 90
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_b",
+                "y": 180
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_b",
+                "y": 270
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_c"
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_c",
+                "y": 90
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_c",
+                "y": 180
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_c",
+                "y": 270
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_d"
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_d",
+                "y": 90
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_d",
+                "y": 180
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_d",
+                "y": 270
+            }
+        ],
+        "flavour=unknown": [
+            {
+                "model": "surfacesamples:block/stone_flint_sample_a"
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_a",
+                "y": 90
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_a",
+                "y": 180
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_a",
+                "y": 270
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_b"
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_b",
+                "y": 90
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_b",
+                "y": 180
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_b",
+                "y": 270
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_c"
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_c",
+                "y": 90
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_c",
+                "y": 180
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_c",
+                "y": 270
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_d"
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_d",
+                "y": 90
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_d",
+                "y": 180
+            },
+            {
+                "model": "surfacesamples:block/stone_flint_sample_d",
                 "y": 270
             }
         ]
