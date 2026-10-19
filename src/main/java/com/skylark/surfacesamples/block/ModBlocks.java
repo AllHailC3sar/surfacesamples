@@ -173,30 +173,35 @@ public class ModBlocks {
                     .strength(0.1f)
                     .sound(SoundType.TUFF)
                     .noOcclusion()
+//                    .noLootTable()
             ));
     public static final DeferredBlock<Block> NICKEL_SAMPLE = registerBlock("nickel_ore_sample",
             () -> new SampleBlock(BlockBehaviour.Properties.of()
                     .strength(0.1f)
                     .sound(SoundType.TUFF)
                     .noOcclusion()
+//                    .noLootTable()
             ));
     public static final DeferredBlock<Block> SILVER_SAMPLE = registerBlock("silver_ore_sample",
             () -> new SampleBlock(BlockBehaviour.Properties.of()
                     .strength(0.1f)
                     .sound(SoundType.TUFF)
                     .noOcclusion()
+//                    .noLootTable()
             ));
     public static final DeferredBlock<Block> ALUMINUM_SAMPLE = registerBlock("aluminum_ore_sample",
             () -> new SampleBlock(BlockBehaviour.Properties.of()
                     .strength(0.1f)
                     .sound(SoundType.TUFF)
                     .noOcclusion()
+//                    .noLootTable()
             ));
     public static final DeferredBlock<Block> URANIUM_SAMPLE = registerBlock("uranium_ore_sample",
             () -> new SampleBlock(BlockBehaviour.Properties.of()
                     .strength(0.1f)
                     .sound(SoundType.TUFF)
                     .noOcclusion()
+//                    .noLootTable()
             ));
 
 
@@ -205,18 +210,21 @@ public class ModBlocks {
                     .strength(0.1f)
                     .sound(SoundType.TUFF)
                     .noOcclusion()
+//                    .noLootTable()
             ));
     public static final DeferredBlock<Block> FLUORITE_SAMPLE = registerBlock("fluorite_ore_sample",
             () -> new SampleBlock(BlockBehaviour.Properties.of()
                     .strength(0.1f)
                     .sound(SoundType.TUFF)
                     .noOcclusion()
+//                    .noLootTable()
             ));
     public static final DeferredBlock<Block> OSMIUM_SAMPLE = registerBlock("osmium_ore_sample",
             () -> new SampleBlock(BlockBehaviour.Properties.of()
                     .strength(0.1f)
                     .sound(SoundType.TUFF)
                     .noOcclusion()
+//                    .noLootTable()
             ));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
