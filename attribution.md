@@ -4,5 +4,5 @@ Zinc ore texture from [Create](https://modrinth.com/mod/create)
 Andesite chunks, glowquartz shard, flint block, and crystallised redstone shard textures adapted from [Malcomriley's Unused Textures](https://github.com/malcolmriley/unused-textures)
 Glowquartz & crystallised redstone block textures also assembled from malcomriley's item sprites
 Sample pickup behaviour inspired by [Geolosys](https://modrinth.com/mod/geolosys) and Vintage Story
-Uranium, Alumin(i)um, Silver, and Nickel textures from [Immersive Engineering](https://github.com/BluSunrize/ImmersiveEngineering)
-Lead, Osmium, Flourite, and Tin ore textures from [Mekanism](https://github.com/mekanism/mekanism)
+Uranium, Alumin(i)um, Silver, and Nickel textures taken and modified from [Immersive Engineering](https://github.com/BluSunrize/ImmersiveEngineering)
+Lead, Osmium, Flourite, and Tin ore textures taken and modified from [Mekanism](https://github.com/mekanism/mekanism)

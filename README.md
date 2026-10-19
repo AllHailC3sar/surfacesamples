@@ -7,11 +7,17 @@ Surface Samples is a simple mod to do a simple thing: add small indicator blocks
 
 THIS MOD DOES NOT IMPACT WORLDGEN, FOR THESE TO APPEAR NATURALLY YOU WILL NEED A WORLDGEN MOD LIKE LARGE ORE DEPOSITS.
 
-There are ore samples for all vanilla and create ores, including nether variants for gold, quartz, and netherite. I've also included a non-nether variant of quartz, which by default drops [Sky's Overworld Quartz](https://modrinth.com/mod/skys-overworld-quartz) shards.
+There are ore samples for all vanilla ores, including nether variants for gold, quartz, and netherite. There is also a flint sample that drops one flint, for use in modpacks that over-rely on flint RNG. I've also included a non-nether variant of quartz, which by default drops [Sky's Overworld Quartz](https://modrinth.com/mod/skys-overworld-quartz) shards.
 
-There are blockstate variants for sandy and red sandy environments, these live under the `flavour` blockstate, the values are `stony`, `sandy`, and `red_sandy` I've included example configs for Large Ore Deposits [here](adlods%20example%20configs).
+Currently, there are also samples for the following mods' ores:
+- Create
+- Immersive Engineering
+- Mekanism
+
+There are blockstate variants for sandy and red sandy environments, these live under the `flavour` blockstate; the values are `stony`, `sandy`, and `red_sandy` Large Ore Deposits now has configs for Surface Samples by default!
 
 ![all samples](images/all%20samples.png)
+[Mekanism & ImEng samples](images/new%20samples.png)
 
 It also adds in four other blocks:
 - Crystallised redstone, which is a concentrated block of redstone that acts as a hybrid between a redstone block and redstone ore
@@ -47,8 +53,10 @@ Attribution/Credits:
 - Glowquartz & crystallised redstone block textures also assembled from malcomriley's item sprites
 - Sample pickup behaviour inspired by [Geolosys](https://modrinth.com/mod/geolosys) and Vintage Story
 - Sample model inspired by Vintage Story
+- Uranium, Alumin(i)um, Silver, and Nickel textures taken and modified from [Immersive Engineering](https://github.com/BluSunrize/ImmersiveEngineering) with permission from BluSunrize
+- Lead, Osmium, Flourite, and Tin ore textures taken and modified from [Mekanism](https://github.com/mekanism/mekanism)
 
 
 Regarding Creativity
 =======
-I do not and never will use AI in my creations. The code, models, and artwork in this may not be perfect, but they are mine, as are any modifications I've made to the sources listed above.
+I do not and never will use AI in my creations. The code, models, and artwork in this may not be perfect, but they are mine unless specified above, as are any modifications I've made to the sources listed above.
