@@ -1,7 +1,7 @@
 {
     "parent": "surfacesamples:block/ore_sample_c",
     "textures": {
-        "ore": "surfacesamples:block/gravel_packed_flint",
-        "stone": "minecraft:block/gravel"
+        "ore": "minecraft:block/gravel",
+        "stone": "surfacesamples:block/gravel_packed_flint"
     }
 }
