@@ -12,6 +12,15 @@
     "surfacesamples:lapis_ore_sample",
     "surfacesamples:quartz_ore_sample",
     "surfacesamples:redstone_ore_sample",
-    "surfacesamples:zinc_ore_sample"
+    "surfacesamples:flint_sample",
+    "surfacesamples:zinc_ore_sample",
+    "surfacesamples:nickel_ore_sample",
+    "surfacesamples:lead_ore_sample",
+    "surfacesamples:aluminum_ore_sample",
+    "surfacesamples:silver_ore_sample",
+    "surfacesamples:uranium_ore_sample",
+    "surfacesamples:osmium_ore_sample",
+    "surfacesamples:fluorite_ore_sample",
+    "surfacesamples:tin_ore_sample"
   ]
 }
