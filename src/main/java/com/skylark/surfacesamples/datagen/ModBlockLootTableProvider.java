@@ -51,7 +51,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         add(ModBlocks.LAPIS_SAMPLE.get(),
                 block -> createMultipleOreDrops(ModBlocks.LAPIS_SAMPLE.get(), Items.LAPIS_LAZULI, 0, 2));
         add(ModBlocks.REDSTONE_SAMPLE.get(),
-                block -> createMultipleOreDrops(ModBlocks.REDSTONE_SAMPLE.get(), Items.REDSTONE, 0, 5));
+                block -> createMultipleOreDrops(ModBlocks.REDSTONE_SAMPLE.get(), Items.REDSTONE, 0, 3));
         add(ModBlocks.ANCIENT_DEBRIS_SAMPLE.get(),
                 block -> createMultipleOreDrops(ModBlocks.ANCIENT_DEBRIS_SAMPLE.get(), Items.NETHERITE_SCRAP, 0, 1));
         add(ModBlocks.NETHER_GOLD_SAMPLE.get(),
