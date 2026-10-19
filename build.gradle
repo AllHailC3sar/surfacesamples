@@ -42,6 +42,20 @@ repositories {
     }
 
     maven {
+        name = "CurseMaven"
+        url = "https://cursemaven.com"
+
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+
+    maven {
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+    }
+
+    maven {
         // location of the maven that hosts JEI files since January 2023
         name = "Jared's maven"
         url = "https://maven.blamejared.com/"
@@ -150,6 +164,12 @@ dependencies {
     compileOnly("dev.engine-room.flywheel:flywheel-neoforge-api-${minecraft_version}:${flywheel_version}")
     runtimeOnly("dev.engine-room.flywheel:flywheel-neoforge-${minecraft_version}:${flywheel_version}")
     implementation("com.tterrag.registrate:Registrate:${registrate_version}")
+
+    runtimeOnly("maven.modrinth:iJNje1E8:XXjs6tNa") // snow! real magic
+    runtimeOnly("maven.modrinth:ufdDoWPd:tfwJWC8g") // kiwi (dependency for snow)
+
+    runtimeOnly("curse.maven:adlods-318833:8595420")
+    runtimeOnly("curse.maven:enderTech-244844:8980655")
 
     runtimeOnly("blusunrize.immersiveengineering:ImmersiveEngineering:${minecraft_version}-${ie_version}")
 
